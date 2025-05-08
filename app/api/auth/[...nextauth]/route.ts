@@ -2,7 +2,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import NextAuth, { NextAuthOptions } from "next-auth";
 import connectDB from "@/lib/mongodb";
-import Admin from "@/models/Admin";
+import Admin from "@/models/admin";
 
 connectDB();
 

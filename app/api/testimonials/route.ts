@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import connectDB from "@/lib/mongodb";
-import Testimonial from "@/models/Testimonial";
+import Testimonial from "@/models/testimonial";
 
 connectDB();
 

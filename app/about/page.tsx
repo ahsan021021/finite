@@ -11,27 +11,27 @@ import ParallaxSection from "@/components/parallax-section"
 export default function About() {
   const teamMembers = [
     {
-      name: "Hasan Bukhari",
-      position: "Founder & CEO",
+      name: "Has B.",
+      position: "Founder & CEO | Developer",
       image: "https://media.licdn.com/dms/image/v2/D5603AQEK5B_S3Tq-0g/profile-displayphoto-shrink_400_400/B56Zaa3keyGoAg-/0/1746354981328?e=1752105600&v=beta&t=RAJrYAxiI2bHAwTbdmxRQtUSrF-gw2NTRIHSk3fwlb0",
       bio: "With over 10 years of experience in digital innovation, Hasan leads our team with a passion for creating exceptional digital experiences.",
     },
     {
-      name: "Murtaza Touqeer",
-      position: "Co-Founder & CTO",
-      image: "/team/sarah.jpg",
+      name: "Murtaza T.",
+      position: "Partner | Developer / Designer",
+      image: "https://media.istockphoto.com/id/1320815200/photo/wall-black-background-for-design-stone-black-texture-background.jpg?s=612x612&w=0&k=20&c=hqcH1pKLCLn_ZQ5vUPUfi3BOqMWoBzbk5-61Xq7UMsU=",
       bio: "Murtaza brings his artistic vision and strategic thinking to every project, ensuring our designs are both beautiful and effective.",
     },
     {
-      name: "Syed Aayan Hussain",
-      position: "Co-Founder & COO",
-      image: "https://instagram.fkhi22-1.fna.fbcdn.net/v/t51.2885-19/293554841_455009222763882_1222720909308006887_n.jpg?_nc_ht=instagram.fkhi22-1.fna.fbcdn.net&_nc_cat=106&_nc_oc=Q6cZ2QF0fcZvcJT80r84BBlG45QzSV60aLITJQUc1NJlZSpMItkqARFIqSHs0mV5ik3vJvM&_nc_ohc=0Fyw2HOXxuEQ7kNvwEeX7XH&_nc_gid=mBHMU65uefnPsWp0OR1uXQ&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AfLouPrDzrNXQs8VpCGTFitOyBzKSKFNgp_MGzJt1Y_Djg&oe=681FD7A2&_nc_sid=7d3ac5",
+      name: "Tas B.",
+      position: "Founder & CTO | Designer",
+      image: "https://i.ibb.co/WTTjwRG/293554841-455009222763882-1222720909308006887-n-1.jpg",
       bio: "Aayan's technical expertise and problem-solving skills drive the development of our most complex and innovative solutions.",
     },
     {
-      name: "Jessica Martinez",
-      position: "Marketing Strategist",
-      image: "/team/jessica.jpg",
+      name: "Eli B.",
+      position: "Co-Founder & CMO | Marketing Specialist",
+      image: "https://media.istockphoto.com/id/1320815200/photo/wall-black-background-for-design-stone-black-texture-background.jpg?s=612x612&w=0&k=20&c=hqcH1pKLCLn_ZQ5vUPUfi3BOqMWoBzbk5-61Xq7UMsU=",
       bio: "Jessica crafts data-driven marketing strategies that help our clients reach their target audiences and achieve their business goals.",
     },
   ]

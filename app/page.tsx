@@ -25,8 +25,27 @@ interface Testimonial {
 
 export default function Home() {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
-  const [loading, setLoading] = useState(true);
+const [projects, setProjects] = useState([]);
+const [loading, setLoading] = useState(true);
 
+useEffect(() => {
+  async function fetchProjects() {
+    try {
+      const response = await fetch("/api/projects");
+      if (!response.ok) {
+        throw new Error("Failed to fetch projects");
+      }
+      const data = await response.json();
+      setProjects(data);
+    } catch (error) {
+      console.error("Error fetching projects:", error);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  fetchProjects();
+}, []);
   useEffect(() => {
     async function fetchTestimonials() {
       try {
@@ -72,32 +91,7 @@ export default function Home() {
     },
   ]
 
-  const projects = [
-    {
-      title: "E-commerce Platform",
-      category: "Web Development",
-      image: "/portfolio/ecommerce-project.jpg",
-      link: "/portfolio/ecommerce-platform",
-    },
-    {
-      title: "Fitness Mobile App",
-      category: "Mobile Development",
-      image: "/portfolio/fitness-app.jpg",
-      link: "/portfolio/fitness-app",
-    },
-    {
-      title: "Financial Dashboard",
-      category: "UI/UX Design",
-      image: "/portfolio/financial-dashboard.jpg",
-      link: "/portfolio/financial-dashboard",
-    },
-    {
-      title: "Restaurant Booking System",
-      category: "Web Development",
-      image: "/portfolio/restaurant-booking.jpg",
-      link: "/portfolio/restaurant-booking",
-    },
-  ]
+  
 
   return (
     <div className="w-full">
@@ -159,27 +153,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="mt-12">
-                <p className="text-gray-400 mb-4">Trusted by innovative companies</p>
-                <div className="flex flex-wrap gap-8 items-center">
-                  {[
-                    "https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png",
-                    "https://cdn.pixabay.com/photo/2013/01/29/22/53/yahoo-76684_1280.png",
-                    "https://cdn.pixabay.com/photo/2015/04/13/17/45/icon-720944_1280.png",
-                    "https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_1280.png",
-                  ].map((logo, i) => (
-                    <motion.img
-                      key={i}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 0.7, y: 0 }}
-                      transition={{ delay: 0.5 + i * 0.1, duration: 0.5 }}
-                      src={logo}
-                      alt={`Client Logo ${i + 1}`}
-                      className="h-8 hover:opacity-100 transition-opacity"
-                    />
-                  ))}
-                </div>
-              </div>
+            
             </motion.div>
 
             <motion.div
@@ -417,44 +391,40 @@ export default function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative overflow-hidden gradient-border p-1 rounded-3xl hover-lift"
-              >
-                <Link href={project.link}>
-                  <div className="relative overflow-hidden rounded-3xl">
-                    <img
-                      src={
-                        index === 0
-                          ? "https://images.unsplash.com/photo-1661956602944-249bcd04b63f?q=80&w=1470&auto=format&fit=crop"
-                          : index === 1
-                            ? "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1470&auto=format&fit=crop"
-                            : index === 2
-                              ? "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop"
-                              : "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1474&auto=format&fit=crop"
-                      }
-                      alt={project.title}
-                      className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
-                    <div className="absolute bottom-0 left-0 p-6">
-                      <div className="pill-tag mb-2">{project.category}</div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
-                      <div className="flex items-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span>View Project</span>
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
+  {loading ? (
+    <div className="text-center text-gray-400">Loading projects...</div>
+  ) : (
+    projects.map((project, index) => (
+      <motion.div
+        key={project.id || index} // Ensure a unique key
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        className="group relative overflow-hidden gradient-border p-1 rounded-3xl hover-lift"
+      >
+        <Link href={project.linkUrl || "#"}> {/* Fallback to "#" if link is undefined */}
+          <div className="relative overflow-hidden rounded-3xl">
+            <img
+              src={project.imageUrl } // Fallback to placeholder image
+              alt={project.title || "Project"} // Fallback to "Project" if title is undefined
+              className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"></div>
+            <div className="absolute bottom-0 left-0 p-6">
+              <div className="pill-tag mb-2">{project.technologies || "Uncategorized"}</div> {/* Fallback to "Uncategorized" */}
+              <h3 className="text-2xl font-bold text-white mb-2">{project.title || "Untitled Project"}</h3> {/* Fallback to "Untitled Project" */}
+              <div className="flex items-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span>View Project</span>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </div>
+            </div>
           </div>
+        </Link>
+      </motion.div>
+    ))
+  )}
+</div>
 
           <div className="mt-12 text-center">
             <Link href="/portfolio">

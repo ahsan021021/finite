@@ -2,128 +2,96 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { ArrowRight, CheckCircle, Code, Database, Lock, Zap, Layers, BarChart } from "lucide-react"
+import { ArrowRight, CheckCircle, BarChart, Target, TrendingUp, Mail, Share2, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import GradientText from "@/components/gradient-text"
 import ParticleBackground from "@/components/particle-background"
 
-export default function WebDevelopment() {
+export default function DigitalMarketingClient() {
   const features = [
     {
-      icon: Code,
-      title: "Custom Website Development",
+      icon: Search,
+      title: "Search Engine Optimization (SEO)",
       description:
-        "Tailored websites designed to meet your specific business needs, from simple brochure sites to complex web applications.",
+        "Improve your website's visibility in search engine results to drive organic traffic and increase conversions.",
     },
     {
-      icon: Database,
-      title: "Web Application Development",
-      description:
-        "Powerful, scalable web applications with robust functionality to streamline your business processes.",
+      icon: Target,
+      title: "Pay-Per-Click Advertising (PPC)",
+      description: "Strategic paid advertising campaigns that target your ideal customers and deliver measurable ROI.",
     },
     {
-      icon: Layers,
-      title: "Content Management Systems",
+      icon: Share2,
+      title: "Social Media Marketing",
       description:
-        "User-friendly CMS solutions that make it easy to update and manage your website content without technical knowledge.",
+        "Engage with your audience and build brand awareness through effective social media strategies and campaigns.",
     },
     {
-      icon: Lock,
-      title: "Secure Development Practices",
+      icon: Mail,
+      title: "Email Marketing",
       description:
-        "Implementation of industry-standard security measures to protect your website and user data from threats.",
+        "Nurture leads and maintain customer relationships with personalized, targeted email marketing campaigns.",
     },
     {
-      icon: Zap,
-      title: "Performance Optimization",
+      icon: TrendingUp,
+      title: "Content Marketing",
       description:
-        "Speed and performance enhancements to ensure your website loads quickly and provides a smooth user experience.",
+        "Create valuable, relevant content that attracts and engages your target audience while driving business growth.",
     },
     {
       icon: BarChart,
-      title: "Analytics Integration",
-      description: "Setup of analytics tools to track user behavior and provide insights for continuous improvement.",
-    },
-  ]
-
-  const technologies = [
-    {
-      category: "Frontend",
-      items: ["React", "Next.js", "Vue.js", "Angular", "HTML5/CSS3", "JavaScript/TypeScript"],
-    },
-    {
-      category: "Backend",
-      items: ["Node.js", "Python", "PHP", "Ruby on Rails", "Java", ".NET"],
-    },
-    {
-      category: "Databases",
-      items: ["MongoDB", "MySQL", "PostgreSQL", "Firebase", "Redis", "Elasticsearch"],
-    },
-    {
-      category: "CMS",
-      items: ["WordPress", "Drupal", "Contentful", "Strapi", "Sanity", "Shopify"],
+      title: "Analytics & Reporting",
+      description:
+        "Comprehensive data analysis and reporting to track performance and continuously optimize your marketing efforts.",
     },
   ]
 
   const process = [
     {
-      title: "Requirements Gathering",
+      title: "Discovery & Analysis",
       description:
-        "We start by understanding your business goals, target audience, and specific requirements for your web project.",
+        "We start by understanding your business, goals, target audience, and current digital presence through in-depth research and analysis.",
     },
     {
-      title: "Planning & Architecture",
+      title: "Strategy Development",
       description:
-        "We create a detailed plan and technical architecture that outlines the structure, functionality, and technologies for your website.",
+        "Based on our findings, we create a comprehensive digital marketing strategy tailored to your specific needs and objectives.",
     },
     {
-      title: "Design & Prototyping",
+      title: "Implementation",
       description:
-        "Our designers create wireframes and visual designs that align with your brand and provide an optimal user experience.",
+        "We execute the strategy across relevant channels, implementing SEO, PPC, content, social media, and email marketing tactics.",
     },
     {
-      title: "Development",
+      title: "Monitoring & Optimization",
       description:
-        "Our development team brings the designs to life, building a robust, scalable, and secure website or web application.",
+        "We continuously monitor campaign performance, making data-driven adjustments to optimize results and maximize ROI.",
     },
     {
-      title: "Testing & QA",
+      title: "Reporting & Analysis",
       description:
-        "We conduct thorough testing across different devices and browsers to ensure functionality, performance, and security.",
-    },
-    {
-      title: "Deployment & Launch",
-      description:
-        "Once everything is perfect, we deploy your website to a production environment and ensure a smooth launch.",
-    },
-    {
-      title: "Maintenance & Support",
-      description:
-        "We provide ongoing maintenance and support to keep your website secure, up-to-date, and performing optimally.",
+        "Regular reporting and analysis keep you informed about campaign performance, insights, and recommendations for future growth.",
     },
   ]
 
   const projects = [
     {
-      title: "E-commerce Platform",
-      description:
-        "A comprehensive e-commerce solution with advanced product filtering, secure payment processing, and inventory management.",
+      title: "Digital Marketing Campaign",
+      description: "A multi-channel marketing campaign that increased client's customer acquisition by 150%.",
+      image: "/portfolio/marketing-campaign.jpg",
+      link: "/portfolio/marketing-campaign",
+    },
+    {
+      title: "E-commerce SEO Strategy",
+      description: "Comprehensive SEO strategy that boosted organic traffic by 200% and sales by 85%.",
       image: "/portfolio/ecommerce-project.jpg",
       link: "/portfolio/ecommerce-platform",
     },
     {
-      title: "Financial Dashboard",
-      description:
-        "An intuitive financial dashboard that visualizes complex data for easy decision-making and financial planning.",
-      image: "/portfolio/financial-dashboard.jpg",
-      link: "/portfolio/financial-dashboard",
-    },
-    {
-      title: "Restaurant Booking System",
-      description:
-        "A streamlined reservation system with real-time availability, customer management, and automated notifications.",
-      image: "/portfolio/restaurant-booking.jpg",
-      link: "/portfolio/restaurant-booking",
+      title: "Social Media Brand Building",
+      description: "Social media campaign that increased engagement by 300% and followers by 10,000 in three months.",
+      image: "/portfolio/luxury-brand.jpg",
+      link: "/portfolio/luxury-brand-website",
     },
   ]
 
@@ -142,13 +110,13 @@ export default function WebDevelopment() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="inline-block rounded-lg bg-purple-900/30 px-3 py-1 text-sm text-purple-300 mb-6">
-              Web Development
+              Digital Marketing
             </div>
             <h1 className="text-5xl font-bold mb-6">
-              <GradientText>Custom Web Solutions for Your Business</GradientText>
+              <GradientText>Strategic Digital Marketing Solutions</GradientText>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              We create powerful, scalable, and secure websites and web applications that drive results
+              Data-driven strategies to increase your online visibility, engage your audience, and drive business growth
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
@@ -156,7 +124,7 @@ export default function WebDevelopment() {
                   size="lg"
                   className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
                 >
-                  Start Your Project
+                  Start Your Campaign
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -188,23 +156,22 @@ export default function WebDevelopment() {
                 Overview
               </div>
               <h2 className="text-4xl font-bold mb-6">
-                <GradientText>Elevate Your Online Presence</GradientText>
+                <GradientText>Elevate Your Digital Presence</GradientText>
               </h2>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  In today's digital landscape, your website is often the first point of contact between your business
-                  and potential customers. It's essential that it makes a strong impression and delivers a seamless user
-                  experience.
-                </p>
-                <p>
-                  At AenFinite, we specialize in creating custom web solutions that not only look great but also drive
-                  results for your business. Whether you need a simple informational website, a complex web application,
-                  or an e-commerce platform, our team has the expertise to bring your vision to life.
-                </p>
-                <p>
-                  We take a strategic approach to web development, focusing on your business goals, target audience, and
-                  industry best practices to create websites that stand out from the competition and deliver measurable
+                  In today's digital landscape, a strong online presence is essential for business success. Our digital
+                  marketing services help you cut through the noise, reach your target audience, and achieve measurable
                   results.
+                </p>
+                <p>
+                  At AenFinite, we take a strategic, data-driven approach to digital marketing. We combine creativity
+                  with analytics to develop campaigns that not only capture attention but also drive conversions and
+                  deliver ROI.
+                </p>
+                <p>
+                  Whether you're looking to increase brand awareness, generate leads, or boost sales, our comprehensive
+                  digital marketing solutions are designed to help you achieve your business goals.
                 </p>
               </div>
 
@@ -212,27 +179,27 @@ export default function WebDevelopment() {
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-purple-400 mt-1 mr-3" />
                   <div>
-                    <h3 className="text-lg font-semibold text-white">Responsive Design</h3>
+                    <h3 className="text-lg font-semibold text-white">Data-Driven Strategies</h3>
                     <p className="text-gray-400">
-                      Websites that look and function perfectly on all devices, from desktops to smartphones.
+                      We use analytics and insights to develop and refine marketing strategies that deliver results.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-purple-400 mt-1 mr-3" />
                   <div>
-                    <h3 className="text-lg font-semibold text-white">SEO-Friendly</h3>
+                    <h3 className="text-lg font-semibold text-white">Multi-Channel Approach</h3>
                     <p className="text-gray-400">
-                      Built with search engine optimization in mind to improve your visibility online.
+                      We leverage multiple digital channels to maximize your reach and engagement.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-purple-400 mt-1 mr-3" />
                   <div>
-                    <h3 className="text-lg font-semibold text-white">Scalable Solutions</h3>
+                    <h3 className="text-lg font-semibold text-white">Measurable Results</h3>
                     <p className="text-gray-400">
-                      Websites and applications that can grow and evolve with your business needs.
+                      We provide transparent reporting and focus on metrics that matter to your business.
                     </p>
                   </div>
                 </div>
@@ -248,8 +215,8 @@ export default function WebDevelopment() {
             >
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl shadow-purple-500/10 pillow-effect p-2">
                 <img
-                  src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*EC0Lcer1m5Qvyna2wkhboA.jpeg"
-                  alt="Web Development"
+                  src="https://cdn.pixabay.com/photo/2015/09/05/21/13/analytics-925379_1280.jpg"
+                  alt="Digital Marketing"
                   className="w-full h-auto rounded-xl"
                 />
               </div>
@@ -273,13 +240,13 @@ export default function WebDevelopment() {
             className="text-center mb-16"
           >
             <div className="inline-block rounded-lg bg-purple-900/30 px-3 py-1 text-sm text-purple-300 mb-4">
-              Features
+              Services
             </div>
             <h2 className="text-4xl font-bold mb-4">
-              <GradientText>Comprehensive Web Development Services</GradientText>
+              <GradientText>Comprehensive Digital Marketing Services</GradientText>
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              We offer a full range of web development services to meet your business needs
+              We offer a full range of digital marketing services to help your business thrive online
             </p>
           </motion.div>
 
@@ -304,54 +271,8 @@ export default function WebDevelopment() {
         </div>
       </section>
 
-      {/* Technologies Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <div className="inline-block rounded-lg bg-purple-900/30 px-3 py-1 text-sm text-purple-300 mb-4">
-              Technologies
-            </div>
-            <h2 className="text-4xl font-bold mb-4">
-              <GradientText>Our Tech Stack</GradientText>
-            </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              We use cutting-edge technologies to build robust, scalable, and secure web solutions
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {technologies.map((tech, index) => (
-              <motion.div
-                key={tech.category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="pillow-effect p-8 h-full"
-              >
-                <h3 className="text-xl font-semibold mb-6 text-white">{tech.category}</h3>
-                <ul className="space-y-3">
-                  {tech.items.map((item) => (
-                    <li key={item} className="flex items-center">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
-                      <span className="text-gray-300">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Process Section */}
-      <section className="py-20 bg-gray-900/50">
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -364,10 +285,10 @@ export default function WebDevelopment() {
               Process
             </div>
             <h2 className="text-4xl font-bold mb-4">
-              <GradientText>Our Web Development Process</GradientText>
+              <GradientText>Our Digital Marketing Process</GradientText>
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              A structured approach to ensure we deliver high-quality web solutions that meet your business needs
+              A structured approach to ensure we deliver high-quality marketing campaigns that meet your business needs
             </p>
           </motion.div>
 
@@ -402,7 +323,7 @@ export default function WebDevelopment() {
       </section>
 
       {/* Portfolio Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-900/50">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -415,9 +336,11 @@ export default function WebDevelopment() {
               Portfolio
             </div>
             <h2 className="text-4xl font-bold mb-4">
-              <GradientText>Featured Web Projects</GradientText>
+              <GradientText>Featured Marketing Projects</GradientText>
             </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">Explore some of our successful web development projects</p>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Explore some of our successful digital marketing campaigns
+            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -476,9 +399,9 @@ export default function WebDevelopment() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto pillow-effect p-12"
           >
-            <h2 className="text-4xl font-bold mb-6 text-white">Ready to Start Your Web Project?</h2>
+            <h2 className="text-4xl font-bold mb-6 text-white">Ready to Boost Your Online Presence?</h2>
             <p className="text-lg mb-8 text-gray-300">
-              Let's collaborate to create a web solution that drives results for your business.
+              Let's collaborate to create a digital marketing strategy that drives results for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">

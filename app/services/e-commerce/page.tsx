@@ -2,104 +2,104 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { ArrowRight, CheckCircle, Code, Database, Lock, Zap, Layers, BarChart } from "lucide-react"
+import { ArrowRight, CheckCircle, ShoppingCart, CreditCard, Package, BarChart, Truck, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import GradientText from "@/components/gradient-text"
 import ParticleBackground from "@/components/particle-background"
 
-export default function WebDevelopment() {
+export default function EcommerceClient() {
   const features = [
     {
-      icon: Code,
-      title: "Custom Website Development",
+      icon: ShoppingCart,
+      title: "E-commerce Website Development",
       description:
-        "Tailored websites designed to meet your specific business needs, from simple brochure sites to complex web applications.",
+        "Custom online stores designed to showcase your products and provide a seamless shopping experience.",
     },
     {
-      icon: Database,
-      title: "Web Application Development",
-      description:
-        "Powerful, scalable web applications with robust functionality to streamline your business processes.",
+      icon: CreditCard,
+      title: "Payment Gateway Integration",
+      description: "Secure payment processing solutions that support multiple payment methods and currencies.",
     },
     {
-      icon: Layers,
-      title: "Content Management Systems",
+      icon: Package,
+      title: "Inventory Management",
       description:
-        "User-friendly CMS solutions that make it easy to update and manage your website content without technical knowledge.",
+        "Robust inventory systems to track stock levels, manage products, and automate reordering processes.",
     },
     {
-      icon: Lock,
-      title: "Secure Development Practices",
-      description:
-        "Implementation of industry-standard security measures to protect your website and user data from threats.",
+      icon: Users,
+      title: "Customer Account Management",
+      description: "User-friendly account systems that enhance the shopping experience and build customer loyalty.",
     },
     {
-      icon: Zap,
-      title: "Performance Optimization",
-      description:
-        "Speed and performance enhancements to ensure your website loads quickly and provides a smooth user experience.",
+      icon: Truck,
+      title: "Order Processing & Fulfillment",
+      description: "Streamlined order management systems to ensure efficient processing, shipping, and delivery.",
     },
     {
       icon: BarChart,
-      title: "Analytics Integration",
-      description: "Setup of analytics tools to track user behavior and provide insights for continuous improvement.",
+      title: "Analytics & Reporting",
+      description: "Comprehensive analytics to track sales, customer behavior, and other key performance indicators.",
     },
   ]
 
-  const technologies = [
+  const platforms = [
     {
-      category: "Frontend",
-      items: ["React", "Next.js", "Vue.js", "Angular", "HTML5/CSS3", "JavaScript/TypeScript"],
+      name: "Shopify",
+      description:
+        "A complete e-commerce platform that lets you start, grow, and manage your business with built-in marketing tools and insights.",
+      image: "https://cdn.iconscout.com/icon/free/png-256/free-shopify-logo-icon-download-in-svg-png-gif-file-formats--online-shopping-brand-logos-pack-icons-226579.png?f=webp&w=256",
     },
     {
-      category: "Backend",
-      items: ["Node.js", "Python", "PHP", "Ruby on Rails", "Java", ".NET"],
+      name: "WooCommerce",
+      description:
+        "A customizable, open-source e-commerce platform built on WordPress, perfect for businesses that need flexibility.",
+      image: "https://brandlogo.org/wp-content/uploads/2025/02/WooCommerce-App-Icon-2025.png.webp",
     },
     {
-      category: "Databases",
-      items: ["MongoDB", "MySQL", "PostgreSQL", "Firebase", "Redis", "Elasticsearch"],
+      name: "Magento",
+      description:
+        "A powerful e-commerce platform with enterprise-level features for businesses with complex requirements.",
+      image: "https://cdn.iconscout.com/icon/free/png-256/free-magento-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-vol-1-pack-logos-icons-3030040.png?f=webp&w=256",
     },
     {
-      category: "CMS",
-      items: ["WordPress", "Drupal", "Contentful", "Strapi", "Sanity", "Shopify"],
+      name: "Custom Solutions",
+      description:
+        "Bespoke e-commerce platforms built from the ground up to meet your specific business needs and requirements.",
+      image: "https://cdn-icons-png.flaticon.com/512/3029/3029478.png",
     },
   ]
 
   const process = [
     {
-      title: "Requirements Gathering",
+      title: "Discovery & Planning",
       description:
-        "We start by understanding your business goals, target audience, and specific requirements for your web project.",
-    },
-    {
-      title: "Planning & Architecture",
-      description:
-        "We create a detailed plan and technical architecture that outlines the structure, functionality, and technologies for your website.",
+        "We start by understanding your business, products, target audience, and specific requirements for your e-commerce platform.",
     },
     {
       title: "Design & Prototyping",
       description:
-        "Our designers create wireframes and visual designs that align with your brand and provide an optimal user experience.",
+        "Our designers create wireframes and visual designs that align with your brand and provide an optimal shopping experience.",
     },
     {
       title: "Development",
       description:
-        "Our development team brings the designs to life, building a robust, scalable, and secure website or web application.",
+        "Our development team builds your e-commerce platform, integrating payment gateways, inventory systems, and other required features.",
     },
     {
       title: "Testing & QA",
       description:
-        "We conduct thorough testing across different devices and browsers to ensure functionality, performance, and security.",
+        "We conduct thorough testing to ensure functionality, performance, security, and a seamless checkout process.",
     },
     {
-      title: "Deployment & Launch",
+      title: "Launch & Training",
       description:
-        "Once everything is perfect, we deploy your website to a production environment and ensure a smooth launch.",
+        "Once everything is perfect, we launch your e-commerce platform and provide training on how to manage it effectively.",
     },
     {
-      title: "Maintenance & Support",
+      title: "Ongoing Support",
       description:
-        "We provide ongoing maintenance and support to keep your website secure, up-to-date, and performing optimally.",
+        "We provide ongoing maintenance and support to keep your e-commerce platform secure, up-to-date, and performing optimally.",
     },
   ]
 
@@ -112,18 +112,17 @@ export default function WebDevelopment() {
       link: "/portfolio/ecommerce-platform",
     },
     {
-      title: "Financial Dashboard",
-      description:
-        "An intuitive financial dashboard that visualizes complex data for easy decision-making and financial planning.",
-      image: "/portfolio/financial-dashboard.jpg",
-      link: "/portfolio/financial-dashboard",
+      title: "E-commerce Mobile App",
+      description: "A feature-rich mobile shopping app with personalized recommendations and seamless checkout.",
+      image: "/portfolio/ecommerce-app.jpg",
+      link: "/portfolio/ecommerce-mobile-app",
     },
     {
-      title: "Restaurant Booking System",
+      title: "Luxury Brand Website",
       description:
-        "A streamlined reservation system with real-time availability, customer management, and automated notifications.",
-      image: "/portfolio/restaurant-booking.jpg",
-      link: "/portfolio/restaurant-booking",
+        "An immersive e-commerce website for a luxury brand with stunning visuals and seamless user experience.",
+      image: "/portfolio/luxury-brand.jpg",
+      link: "/portfolio/luxury-brand-website",
     },
   ]
 
@@ -142,13 +141,13 @@ export default function WebDevelopment() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="inline-block rounded-lg bg-purple-900/30 px-3 py-1 text-sm text-purple-300 mb-6">
-              Web Development
+              E-commerce Solutions
             </div>
             <h1 className="text-5xl font-bold mb-6">
-              <GradientText>Custom Web Solutions for Your Business</GradientText>
+              <GradientText>Powerful E-commerce Solutions</GradientText>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              We create powerful, scalable, and secure websites and web applications that drive results
+              Comprehensive e-commerce platforms that help you sell products online effectively and grow your business
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
@@ -156,7 +155,7 @@ export default function WebDevelopment() {
                   size="lg"
                   className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
                 >
-                  Start Your Project
+                  Start Your Online Store
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -188,23 +187,23 @@ export default function WebDevelopment() {
                 Overview
               </div>
               <h2 className="text-4xl font-bold mb-6">
-                <GradientText>Elevate Your Online Presence</GradientText>
+                <GradientText>Transform Your Retail Business</GradientText>
               </h2>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  In today's digital landscape, your website is often the first point of contact between your business
-                  and potential customers. It's essential that it makes a strong impression and delivers a seamless user
-                  experience.
+                  In today's digital marketplace, having a robust e-commerce presence is essential for retail businesses
+                  looking to thrive. Our e-commerce solutions help you create an online shopping experience that
+                  attracts customers, drives sales, and builds brand loyalty.
                 </p>
                 <p>
-                  At AenFinite, we specialize in creating custom web solutions that not only look great but also drive
-                  results for your business. Whether you need a simple informational website, a complex web application,
-                  or an e-commerce platform, our team has the expertise to bring your vision to life.
+                  At AenFinite, we understand that every e-commerce business has unique needs. Whether you're launching
+                  your first online store or looking to upgrade an existing platform, we provide tailored solutions that
+                  align with your business goals and customer expectations.
                 </p>
                 <p>
-                  We take a strategic approach to web development, focusing on your business goals, target audience, and
-                  industry best practices to create websites that stand out from the competition and deliver measurable
-                  results.
+                  From user-friendly storefronts to secure payment processing and efficient inventory management, our
+                  comprehensive e-commerce solutions cover all aspects of online retail to help your business succeed in
+                  the digital marketplace.
                 </p>
               </div>
 
@@ -212,18 +211,18 @@ export default function WebDevelopment() {
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-purple-400 mt-1 mr-3" />
                   <div>
-                    <h3 className="text-lg font-semibold text-white">Responsive Design</h3>
+                    <h3 className="text-lg font-semibold text-white">User-Friendly Shopping Experience</h3>
                     <p className="text-gray-400">
-                      Websites that look and function perfectly on all devices, from desktops to smartphones.
+                      Intuitive interfaces and smooth checkout processes that enhance customer satisfaction.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-purple-400 mt-1 mr-3" />
                   <div>
-                    <h3 className="text-lg font-semibold text-white">SEO-Friendly</h3>
+                    <h3 className="text-lg font-semibold text-white">Secure & Reliable Platforms</h3>
                     <p className="text-gray-400">
-                      Built with search engine optimization in mind to improve your visibility online.
+                      Robust security measures to protect customer data and ensure safe transactions.
                     </p>
                   </div>
                 </div>
@@ -232,7 +231,7 @@ export default function WebDevelopment() {
                   <div>
                     <h3 className="text-lg font-semibold text-white">Scalable Solutions</h3>
                     <p className="text-gray-400">
-                      Websites and applications that can grow and evolve with your business needs.
+                      E-commerce platforms that can grow and evolve with your business needs.
                     </p>
                   </div>
                 </div>
@@ -248,8 +247,8 @@ export default function WebDevelopment() {
             >
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl shadow-purple-500/10 pillow-effect p-2">
                 <img
-                  src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*EC0Lcer1m5Qvyna2wkhboA.jpeg"
-                  alt="Web Development"
+                  src="https://cdn.pixabay.com/photo/2018/08/09/14/01/ecommerce-3594580_1280.jpg"
+                  alt="E-commerce Solutions"
                   className="w-full h-auto rounded-xl"
                 />
               </div>
@@ -276,10 +275,10 @@ export default function WebDevelopment() {
               Features
             </div>
             <h2 className="text-4xl font-bold mb-4">
-              <GradientText>Comprehensive Web Development Services</GradientText>
+              <GradientText>Comprehensive E-commerce Services</GradientText>
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              We offer a full range of web development services to meet your business needs
+              We offer a full range of e-commerce services to help your business succeed online
             </p>
           </motion.div>
 
@@ -304,7 +303,7 @@ export default function WebDevelopment() {
         </div>
       </section>
 
-      {/* Technologies Section */}
+      {/* Platforms Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
@@ -315,35 +314,33 @@ export default function WebDevelopment() {
             className="text-center mb-16"
           >
             <div className="inline-block rounded-lg bg-purple-900/30 px-3 py-1 text-sm text-purple-300 mb-4">
-              Technologies
+              Platforms
             </div>
             <h2 className="text-4xl font-bold mb-4">
-              <GradientText>Our Tech Stack</GradientText>
+              <GradientText>E-commerce Platforms We Work With</GradientText>
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              We use cutting-edge technologies to build robust, scalable, and secure web solutions
+              We specialize in developing on various e-commerce platforms to meet your specific business needs
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {platforms.map((platform, index) => (
               <motion.div
-                key={tech.category}
+                key={platform.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="pillow-effect p-8 h-full"
               >
-                <h3 className="text-xl font-semibold mb-6 text-white">{tech.category}</h3>
-                <ul className="space-y-3">
-                  {tech.items.map((item) => (
-                    <li key={item} className="flex items-center">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
-                      <span className="text-gray-300">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center mr-4">
+                    <img src={platform.image || "/placeholder.svg"} alt={platform.name} className="h-10 w-10" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{platform.name}</h3>
+                </div>
+                <p className="text-gray-400">{platform.description}</p>
               </motion.div>
             ))}
           </div>
@@ -364,10 +361,10 @@ export default function WebDevelopment() {
               Process
             </div>
             <h2 className="text-4xl font-bold mb-4">
-              <GradientText>Our Web Development Process</GradientText>
+              <GradientText>Our E-commerce Development Process</GradientText>
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              A structured approach to ensure we deliver high-quality web solutions that meet your business needs
+              A structured approach to ensure we deliver high-quality e-commerce solutions that meet your business needs
             </p>
           </motion.div>
 
@@ -415,9 +412,9 @@ export default function WebDevelopment() {
               Portfolio
             </div>
             <h2 className="text-4xl font-bold mb-4">
-              <GradientText>Featured Web Projects</GradientText>
+              <GradientText>Featured E-commerce Projects</GradientText>
             </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">Explore some of our successful web development projects</p>
+            <p className="text-gray-300 max-w-2xl mx-auto">Explore some of our successful e-commerce projects</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -476,9 +473,9 @@ export default function WebDevelopment() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto pillow-effect p-12"
           >
-            <h2 className="text-4xl font-bold mb-6 text-white">Ready to Start Your Web Project?</h2>
+            <h2 className="text-4xl font-bold mb-6 text-white">Ready to Launch Your Online Store?</h2>
             <p className="text-lg mb-8 text-gray-300">
-              Let's collaborate to create a web solution that drives results for your business.
+              Let's collaborate to create an e-commerce solution that drives sales and growth for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">

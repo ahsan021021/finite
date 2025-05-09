@@ -242,7 +242,7 @@ export default function MobileDevelopment() {
             >
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl shadow-purple-500/10 pillow-effect p-2">
                 <img
-                  src="/services/mobile-development-hero.jpg"
+                  src="https://www.addevice.io/storage/ckeditor/uploads/images/65f840d316353_mobile.app.development.1920.1080.png"
                   alt="Mobile Development"
                   className="w-full h-auto rounded-xl"
                 />
